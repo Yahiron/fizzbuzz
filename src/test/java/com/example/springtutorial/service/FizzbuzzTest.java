@@ -42,4 +42,13 @@ public class FizzbuzzTest {
 
 		assertThat(action).isEqualTo("4");
 	}
+	
+	@Test
+	@Description("5を入力したときにbuzzを返すこと")
+	void test05() {
+		FizzbuzzService target = new FizzbuzzService();
+		String action = target.fizzbuzz(5);
+
+		assertThat(action).isEqualTo("buzz");
+	}
 }
