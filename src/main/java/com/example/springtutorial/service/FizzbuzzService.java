@@ -6,9 +6,12 @@ package com.example.springtutorial.service;
 public class FizzbuzzService {
 
 	public String fizzbuzz(int i) {
-		if (i != 3) {
-			return String.valueOf(i);
+		if (i == 3) {
+			return "fizz";
+		} else if (i == 5) {
+			return "buzz";
 		}
-		return "fizz";
+		return String.valueOf(i);
 	}
+
 }
