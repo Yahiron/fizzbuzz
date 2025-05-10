@@ -8,44 +8,44 @@ import org.springframework.context.annotation.Description;
 public class FizzbuzzTest {
 
 	@Test
-	@Description("1を入力したときに1を返すこと")
+	@Description("3と5の倍数以外を入力したときにその数字を返すこと")
 	void test01() {
 		FizzbuzzService target = new FizzbuzzService();
-		String action = target.fizzbuzz(1);
+		String actionA = target.fizzbuzz(1);
 
-		assertThat(action).isEqualTo("1");
+		assertThat(actionA).isEqualTo("1");
+
+		String actionB = target.fizzbuzz(2);
+
+		assertThat(actionB).isEqualTo("2");
+
+		String actionC = target.fizzbuzz(4);
+
+		assertThat(actionC).isEqualTo("4");
+
 	}
 
 	@Test
-	@Description("2を入力したときに2を返すこと")
+	@Description("3の倍数を入力したときにfizzを返すこと")
 	void test02() {
 		FizzbuzzService target = new FizzbuzzService();
-		String action = target.fizzbuzz(2);
+		String actionA = target.fizzbuzz(3);
 
-		assertThat(action).isEqualTo("2");
-	}
+		assertThat(actionA).isEqualTo("fizz");
 
-	@Test
-	@Description("3を入力したときにfizzを返すこと")
-	void test03() {
-		FizzbuzzService target = new FizzbuzzService();
-		String action = target.fizzbuzz(3);
+		String actionB = target.fizzbuzz(6);
 
-		assertThat(action).isEqualTo("fizz");
-	}
+		assertThat(actionB).isEqualTo("fizz");
 
-	@Test
-	@Description("4を入力したときに4を返すこと")
-	void test04() {
-		FizzbuzzService target = new FizzbuzzService();
-		String action = target.fizzbuzz(4);
+		String actionC = target.fizzbuzz(9);
 
-		assertThat(action).isEqualTo("4");
+		assertThat(actionC).isEqualTo("fizz");
+
 	}
 
 	@Test
 	@Description("5を入力したときにbuzzを返すこと")
-	void test05() {
+	void test03() {
 		FizzbuzzService target = new FizzbuzzService();
 		String action = target.fizzbuzz(5);
 
@@ -53,20 +53,11 @@ public class FizzbuzzTest {
 	}
 
 	@Test
-	@Description("6を入力したときにfizzを返すこと")
-	void test06() {
+	@Description("10を入力したときにbuzzを返すこと")
+	void test04() {
 		FizzbuzzService target = new FizzbuzzService();
-		String action = target.fizzbuzz(6);
+		String action = target.fizzbuzz(10);
 
-		assertThat(action).isEqualTo("fizz");
-	}
-	
-	@Test
-	@Description("9を入力したときにfizzを返すこと")
-	void test07() {
-		FizzbuzzService target = new FizzbuzzService();
-		String action = target.fizzbuzz(9);
-
-		assertThat(action).isEqualTo("fizz");
+		assertThat(action).isEqualTo("buzz");
 	}
 }
