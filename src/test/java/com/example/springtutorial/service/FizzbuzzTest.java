@@ -60,7 +60,7 @@ public class FizzbuzzTest {
 
 		assertThat(action).isEqualTo("buzz");
 	}
-	
+
 	@Test
 	@Description("15を入力したときにfizzbuzzを返すこと")
 	void test05() {
@@ -68,5 +68,14 @@ public class FizzbuzzTest {
 		String action = target.fizzbuzz(15);
 
 		assertThat(action).isEqualTo("fizzbuzz");
+	}
+
+	@Test
+	@Description("20を入力したときにbuzzを返すこと")
+	void test06() {
+		FizzbuzzService target = new FizzbuzzService();
+		String action = target.fizzbuzz(20);
+
+		assertThat(action).isEqualTo("buzz");
 	}
 }
