@@ -44,38 +44,28 @@ public class FizzbuzzTest {
 	}
 
 	@Test
-	@Description("5を入力したときにbuzzを返すこと")
+	@Description("5の倍数を入力したときにbuzzを返すこと")
 	void test03() {
 		FizzbuzzService target = new FizzbuzzService();
-		String action = target.fizzbuzz(5);
+		String actionA = target.fizzbuzz(5);
 
-		assertThat(action).isEqualTo("buzz");
-	}
+		assertThat(actionA).isEqualTo("buzz");
 
-	@Test
-	@Description("10を入力したときにbuzzを返すこと")
-	void test04() {
-		FizzbuzzService target = new FizzbuzzService();
-		String action = target.fizzbuzz(10);
+		String actionB = target.fizzbuzz(10);
 
-		assertThat(action).isEqualTo("buzz");
+		assertThat(actionB).isEqualTo("buzz");
+
+		String actionC = target.fizzbuzz(20);
+
+		assertThat(actionC).isEqualTo("buzz");
 	}
 
 	@Test
 	@Description("15を入力したときにfizzbuzzを返すこと")
-	void test05() {
+	void test04() {
 		FizzbuzzService target = new FizzbuzzService();
 		String action = target.fizzbuzz(15);
 
 		assertThat(action).isEqualTo("fizzbuzz");
-	}
-
-	@Test
-	@Description("20を入力したときにbuzzを返すこと")
-	void test06() {
-		FizzbuzzService target = new FizzbuzzService();
-		String action = target.fizzbuzz(20);
-
-		assertThat(action).isEqualTo("buzz");
 	}
 }
